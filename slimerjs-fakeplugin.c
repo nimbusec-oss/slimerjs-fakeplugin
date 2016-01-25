@@ -2,8 +2,8 @@
 #include "sdk/headers/npapi.h"
 #include "sdk/headers/npfunctions.h"
 
-#define PLUGIN_NAME "slimy"
-#define PLUGIN_DESCRIPTION "This plugins enables slimerjs to load more resources, but does nothing itself"
+#define PLUGIN_NAME "slimerjs-fakeplugin"
+#define PLUGIN_DESCRIPTION "This plugins enables SlimerJS to load more resources, but does not execute them"
 #define PLUGIN_VERSION "0.0.1"
 
 #define MIME_TYPES "application/x-shockwave-flash:swf:Flash;" \
@@ -34,8 +34,6 @@ NP_EXPORT(NPError)     NP_Initialize(NPNetscapeFuncs* bFuncs, NPPluginFuncs* pFu
   pFuncs->destroystream = NPP_DestroyStream;
   pFuncs->event = NPP_HandleEvent;
   pFuncs->getvalue = NPP_GetValue;
-
-	printf("slimy is ready to rock!\n");
 	return NPERR_NO_ERROR;
 }
 
