@@ -2,18 +2,6 @@
 #include "sdk/headers/npapi.h"
 #include "sdk/headers/npfunctions.h"
 
-#define PLUGIN_NAME "slimerjs-fakeplugin"
-#define PLUGIN_DESCRIPTION "This plugins enables SlimerJS to load more resources, but does not execute them"
-#define PLUGIN_VERSION "0.0.1"
-
-#define MIME_TYPES "application/x-shockwave-flash:swf:Flash;" \
-                   "application/postscript:ps,eps:Postscript;" \
-                   "application/pdf:pdf:PDF;" \
-                   "application/x-java-vm:class,jar:Java;" \
-                   "application/x-java-applet:class,jar:Java;" \
-                   "application/x-java-archive:class,jar:Java;" \
-                   "application/x-java-bean:class,jar:Java"
-
 // plugin instance functions (only stubs)
 NPError NPP_New(NPMIMEType pluginType, NPP instance, uint16_t mode, int16_t argc, char* argn[], char* argv[], NPSavedData* saved) { return NPERR_NO_ERROR; }
 NPError NPP_Destroy(NPP instance, NPSavedData** save) { return NPERR_NO_ERROR; }
@@ -51,5 +39,3 @@ NP_EXPORT(NPError)     NP_GetValue(void* future, NPPVariable aVariable, void* aV
   }
   return NPERR_NO_ERROR;
 }
-
-

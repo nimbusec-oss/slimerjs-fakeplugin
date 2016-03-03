@@ -1,2 +1,2 @@
-slimerjs-fakeplugin.o
-slimerjs-fakeplugin.so
+*.o
+*.so
